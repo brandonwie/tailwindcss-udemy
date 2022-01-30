@@ -15,4 +15,8 @@ Jan 31, 2022
 - **container**: 100% width of the breakpoints
 
 - horizontal center align: `mx-auto` (margin x-axis)
+
   - \*`container` class work with fixed screen sizes and not when you want a fluid and responsive layout
+
+- `w-4`: width 1rem (1 = 0.25rem)
+- `w-1/2`: width 50%
