@@ -1,0 +1,14 @@
+{
+  "name": "tailwindcss",
+  "version": "1.0.0",
+  "description": "practices for tailwindcss",
+  "main": "index.js",
+  "author": "Brandon Wie",
+  "license": "MIT",
+  "scripts": {
+    "build": "tailwind build -i ./src/styles.css -o ./public/styles.css"
+  },
+  "dependencies": {
+    "tailwindcss": "2.2.16"
+  }
+}
