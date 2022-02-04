@@ -2,6 +2,92 @@
 
 ## Notes
 
+### Feb 4, 2022
+
+#### Padding and Margin
+
+you won't see blue background in this case unless you set padding to the parent div because inner div occupy full space of the parent
+
+```html
+<div class="bg-blue-500">
+  <div class="bg-red-500">This is inner div</div>
+</div>
+```
+
+you will see the background color of the parent div here
+
+```html
+<div class="bg-blue-500 p-10">
+  <div class="bg-red-500">This is inner div</div>
+</div>
+```
+
+- Margins: `m-10`, `mt-10`, `mr-10`,`mb-10`,`ml-10` (all, top, right, bottom, left as ordered)
+- Padding: works in the same fashion as margins but with letter `p` instead of `m`
+
+#### Adding Gap Between & Justifying items
+
+I think in case of `stretch` option in `justify-item`, you can set it to stretch and use width to particular items that need to be smaller. Then all other times will fit in the divs
+
+(parent div class)
+
+- Gap between columns: `gap-x-{value}`
+- Gap between rows: `gap-y-{value}`
+
+(parent div class)
+
+- Align Items: `justify-items-{left | right | center}`
+  you will see very thin divs from the code below if the child divs don't have width set
+- Stretch Items: `justify-items-stretch`
+
+  - it works as expected if no width is declared
+
+  ```html
+    <div
+      class="bg-yellow-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4 justify-items-center"
+    >
+      <div class="h-20 w-20 bg-red-500">1</div>
+      <div class="h-20 w-20 bg-red-500">2</div>
+      <div class="h-20 w-20 bg-red-500">3</div>
+
+      <div class="h-20 w-20 bg-red-500">4</div>
+      <div class="h-20 w-20 bg-red-500">5</div>
+      <div class="h-20 w-20 bg-red-500">6</div>
+
+      <div class="h-20 w-20 bg-red-500">7</div>
+      <div class="h-20 w-20 bg-red-500">8</div>
+      <div class="h-20 w-20 bg-red-500">9</div>
+    </div>
+  </body>
+  ```
+
+(child div class)
+
+- Align one item: `justify-self-{left | right | center | stretch}`
+
+  - the `stretch` option works as expected if the item has no width set
+
+  ```html
+  <div
+    class="bg-yellow-500 w-auto grid grid-cols-5 grid-flow-row gap-x-2 gap-y-4"
+  >
+    <div class="h-20 w-20 bg-red-500 justify-self-end">1</div>
+    <div class="h-20 w-20 bg-red-500">2</div>
+    <div class="h-20 w-20 bg-red-500">3</div>
+    ...
+    <div class="h-20 bg-red-500 justify-self-stretch">7</div>
+    <div class="h-20 w-20 bg-red-500">8</div>
+    <div class="h-20 w-20 bg-red-500">9</div>
+  </div>
+  ```
+
+#### Flow in Grid Layout
+
+- `grid-flow-row`: fill row first - works as expected when using with `grid-cols-{numCols}`
+- `grid-flow-col`: fill column first - works as expected when using with `grid-rows-{numRows}`
+
+---
+
 ### Feb 2, 2022
 
 #### Flex
@@ -68,6 +154,8 @@
 ```
 
 - make grid in a row fashion (numbering continues downwards, not to the right)
+
+---
 
 ### Jan 31, 2022
 
