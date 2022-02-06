@@ -1,14 +1,11 @@
 {
-  "name": "tailwindcss",
+  "name": "tailwindcss-udemy",
   "version": "1.0.0",
-  "description": "practices for tailwindcss",
   "main": "index.js",
-  "author": "Brandon Wie",
+  "repository": "https://github.com/brandonwie/tailwindcss-udemy.git",
+  "author": "Brandon Wie <brandonwie.cs@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "build": "tailwind build -i ./src/styles.css -o ./public/styles.css"
-  },
-  "dependencies": {
-    "tailwindcss": "2.2.16"
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
   }
 }

@@ -2,6 +2,19 @@
 
 ## Notes
 
+### Feb 6, 2022
+
+> Writing contents on README takes too much time while learning especially because I am not an expert but just to learn things quickly so I decided to minimize the amount of writing things here.
+
+- Box Shadow: `shadow` or `shadow-{sm|md|lg|xl|2xl|inner|none}`
+  - it's not that visible but give you some sort of 3D visual effect
+- Border Radius: `rounded` or `rounded-{sm|md|lg|full}`
+- Margin top + bottom | left + right: `mx-10`, `my-10`: x - left & right, y - top & bottom
+
+- Text Effects: `capitalize`, `normal-case`, `font-bold`, `text-center`, `text-green-500/80`-80 is opacity
+  - you may reason other effects based on what's written
+- opacity can be explicitly set or set with text-color
+
 ### Feb 4, 2022
 
 #### Padding and Margin
