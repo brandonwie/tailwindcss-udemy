@@ -7,5 +7,8 @@
   "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.0.18"
+  },
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   }
 }

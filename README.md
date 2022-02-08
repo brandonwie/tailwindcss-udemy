@@ -2,6 +2,33 @@
 
 ## Notes
 
+### Feb 8
+
+#### Pseudo Selectors
+
+- `group`
+
+  ```html
+  <div class="group bg-red-500">
+    <p class="group-hover:text-white">Para 1</p>
+    <p>Para 2</p>
+    <!-- hover on Para 2 will trigger hover style -->
+  </div>
+  ```
+
+- `:focus`: Triggered when the user clicks or taps on an element or selects it with the keyboard’s `Tab` key
+- `:focus-within `: Triggered when the user clicks or taps on any of its child element or itself
+- `:focus-visible`: Triggered by User-Agent on elements having :focus selector based on some heuristics that determine which one of the active elements should receive focus. (apply in Button and you'll see the real different wen )
+
+#### Using Breakpoints
+
+> Use unprefixed utilities to target mobile, and override them at larger breakpoints
+
+```html
+<!-- This will center text on mobile, and left align it on screens 640px and wider -->
+<div class="text-center sm:text-left"></div>
+```
+
 ### Feb 6, 2022
 
 > Writing contents on README takes too much time while learning especially because I am not an expert but just to learn things quickly so I decided to minimize the amount of writing things here.
