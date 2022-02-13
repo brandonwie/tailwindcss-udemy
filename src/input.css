@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .menu-button {
+    @apply text-white bg-indigo-500 p-3;
+  }
+}

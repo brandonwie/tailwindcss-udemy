@@ -2,6 +2,55 @@
 
 ## Notes
 
+### Feb 13
+
+#### Layer & Apply Directives
+
+- overwite components
+
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+    .menu-button {
+      @apply text-white bg-indigo-500 p-3;
+    }
+  }
+  ```
+
+  and use as,
+
+  ```html
+  <body>
+    <button class="menu-button">Click</button>
+    <button class="menu-button">Exit</button>
+  </body>
+  ```
+
+- Layers
+
+  - The base layer is for things like reset rules or default styles applied to plain HTML elements.
+  - The components layer is for class-based styles that you want to be able to override with utilities.
+  - The utilities layer is for small, single-purpose classes that should always take precedence over any other styles.
+
+- overwrite settings
+
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    a {
+      @apply text-green-500 underline;
+    }
+  }
+  ```
+
+---
+
 ### Feb 8
 
 #### Pseudo Selectors
