@@ -6,7 +6,25 @@
 
 #### Layer & Apply Directives
 
-- overwite components
+- overwrite utilities
+
+  ```css
+  @layer utilities {
+    .text-green-500 {
+      color: blue;
+    }
+  }
+  ```
+
+  you can use as `@apply text-blue-900`
+
+  ```html
+  <h1 class="text-green-500">Heading</h1>
+  ```
+
+  and the `text-green-500` will now show blue color
+
+- overwrite components
 
   ```css
   @tailwind base;
